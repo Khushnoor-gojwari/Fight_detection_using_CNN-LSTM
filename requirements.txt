@@ -1,0 +1,28 @@
+# Fight / Violence detection - Python dependencies
+# Tested with Python 3.12 on Linux (CPU).
+#
+# Install with:
+#     python -m venv venv
+#     source venv/bin/activate        # Windows: venv\Scripts\activate
+#     pip install -r requirements.txt
+#
+# NOTE on model weights:
+#   * VGG19 (ImageNet) base weights are downloaded automatically by Keras the
+#     first time the model is built (no manual step needed).
+#   * The trained fight weights "fightw.hdfs" must be downloaded from Google
+#     Drive. Run:  python download_weights.py   (uses gdown, listed below)
+
+# --- Core deep-learning stack ---
+tensorflow==2.21.0
+# tf-keras provides the legacy Keras 2 API required by the pre-trained weights.
+# The script sets TF_USE_LEGACY_KERAS=1 so tf.keras routes to this package.
+tf-keras==2.21.0
+
+# --- Computer vision / image handling ---
+opencv-python==5.0.0.93
+scikit-image==0.26.0
+numpy==2.5.2
+pillow==12.3.0
+
+# --- Utility to fetch fightw.hdfs from Google Drive ---
+gdown==5.2.0

@@ -1,0 +1,39 @@
+# ---- Virtual environment ----
+venv/
+env/
+.venv/
+
+# ---- Python cache / build artifacts ----
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+build/
+dist/
+
+# ---- Trained model weights (download via download_weights.py) ----
+# fightw.hdfs (~83 MB) is fetched from Google Drive, not committed.
+*.hdfs
+*.h5
+*.hdf5
+
+# ---- Generated / annotated output videos ----
+# This folder is recreated automatically when you run detection.
+output_videos/
+
+# ---- Large media / dataset files (see dataset links in README) ----
+*.avi
+*.mp4
+*.mov
+*.mkv
+
+# ---- Keras cached base models (e.g. VGG19 imagenet weights) ----
+.keras/
+
+# ---- OS / editor junk ----
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
